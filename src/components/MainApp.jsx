@@ -1,6 +1,6 @@
 // src/components/MainApp.js
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 // Import Layout and Page components
@@ -15,32 +15,30 @@ import AllProjectsPage from './AllProjectsPage';
 // import ResumePage from './ResumePage';
 
 // Import background components if they are used here
-import Background from './Background';
 import DBackground from './DBackground';
 
 function MainApp() {
-  const [darkMode, setDarkMode] = useState(false);
-
+  // This effect runs once on mount to set the dark theme permanently.
   useEffect(() => {
     const html = document.documentElement;
-    if (darkMode) {
-      html.classList.add('dark');
-    } else {
+    html.classList.add('dark');
+    
+    // Cleanup function in case the component ever unmounts.
+    return () => {
       html.classList.remove('dark');
-    }
-  }, [darkMode]);
+    };
+  }, []); // Empty dependency array ensures it runs only once.
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      <Background />
-      {darkMode && <DBackground />}
+      <DBackground />
       
       {/* This Routes component is controlled by the BrowserRouter in App.js */}
       <Routes>
         {/* The SharedLayout acts as a wrapper for all nested routes */}
         <Route 
           path="/" 
-          element={<SharedLayout darkMode={darkMode} setDarkMode={setDarkMode} />}
+          element={<SharedLayout />}
         >
           {/* 'index' specifies this as the default route for "/" */}
           <Route index element={<HomePage />} />

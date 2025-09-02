@@ -22,11 +22,11 @@ export default function SharedLayout({ darkMode, setDarkMode }) {
         </nav>
 
         {/* Dark Mode Toggle Button */}
-        <div className="toggle-wrapper p-0">
+        {/* <div className="toggle-wrapper p-0">
           <button onClick={() => setDarkMode(!darkMode)} className="toggle-btn glow-card dark:bg-gray-900 bg-white dark:border-gray-500">
             {darkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* This Outlet is where React Router will render the current page's component */}

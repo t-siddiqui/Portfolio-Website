@@ -1,21 +1,15 @@
-import { useState } from 'react';
+// src/App.js
+
 import { BrowserRouter } from 'react-router-dom';
-import LandingPage from './components/LandingPage';
-import MainApp from './components/MainApp'; // rename your App content here
+import MainApp from './components/MainApp'; // Your main application content
 
 function App() {
-  const [entered, setEntered] = useState(false);
-
+  // The state and conditional logic for the landing page have been removed.
+  // The app now directly renders the main content.
   return (
-    
     <BrowserRouter basename="/Portfolio-Website">
-      {!entered ? (
-        <LandingPage onEnter={() => setEntered(true)} />
-      ) : (
-        <MainApp />
-      )}
-      </BrowserRouter>
-    
+      <MainApp />
+    </BrowserRouter>
   );
 }
 
