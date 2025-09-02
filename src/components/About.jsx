@@ -1,7 +1,7 @@
 // src/components/About.jsx
 
 import { motion } from 'framer-motion';
-import myPhoto from '../assets/me.jpeg';
+import myPhoto from '../assets/Talat.png';
 // Removed useInViewAnimation since it's not being used in the provided code
 // import { useInViewAnimation } from './Ani';
 
