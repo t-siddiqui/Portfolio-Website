@@ -7,7 +7,7 @@ function App() {
   // The state and conditional logic for the landing page have been removed.
   // The app now directly renders the main content.
   return (
-    <BrowserRouter basename="/Portfolio-Website">
+    <BrowserRouter >
       <MainApp />
     </BrowserRouter>
   );

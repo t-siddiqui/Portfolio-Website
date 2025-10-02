@@ -1,7 +1,6 @@
 {
   "name": "portfolio-website",
   "version": "0.1.0",
-  "homepage": "https://t-emit.github.io/Portfolio-Website",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
