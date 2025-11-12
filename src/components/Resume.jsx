@@ -1,4 +1,4 @@
-import resumeImage from '../assets/Screenshot 2025-07-28 172723.png'; // Preview image
+import resumeImage from '../assets/sc.png'; // Preview image
 import resumePDF from '../assets/TALAT_RESUME_2025.pdf'; // Full PDF
 import { useInViewAnimation } from './Ani';
 
