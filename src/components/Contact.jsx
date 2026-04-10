@@ -43,26 +43,41 @@ export default function Contact() {
       return;
     }
 
+    // Check if EmailJS credentials are present
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("EmailJS credentials are missing. Check your .env file.");
+      alert("Email service is not configured correctly. Please use the direct email link below.");
+      return;
+    }
+
     setIsSending(true);
+    console.log("Sending email via EmailJS...");
 
     emailjs.send(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,     // replace with your EmailJS service ID
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,    // replace with your EmailJS template ID
+      serviceId,
+      templateId,
       {
-        from_name: formData.name,
+        name: formData.name,      // Matches {{name}} in template
+        email: formData.email,    // Matches {{email}} in template (used for To Email)
         reply_to: formData.email,
+        title: "Contact Form Inquiry", // Matches {{title}} in template
         message: formData.message,
       },
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY     // replace with your EmailJS public key
+      publicKey
     )
-    .then(() => {
-      alert("Message sent successfully!");
+    .then((response) => {
+      console.log("EmailJS Success:", response.status, response.text);
+      alert("Message sent successfully! 🚀");
       setFormData({ name: "", email: "", message: "" });
       setErrors({});
     })
     .catch((error) => {
       console.error("EmailJS Error:", error);
-      alert("Failed to send message. Please try again.");
+      alert("Failed to send message. Please try again or reach out directly.");
     })
     .finally(() => {
       setIsSending(false);

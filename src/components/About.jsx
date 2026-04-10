@@ -26,10 +26,11 @@ export default function About() {
             </h2>
         
             <p className="text-gray-800 dark:text-gray-200 text-lg mt-4"> {/* Added margin-top */}
-              I'm <strong>Talatunnisa A. Siddiqui</strong>, a passionate B.Tech Computer Science and Engineering student,
-              deeply interested in full-stack development and emerging technologies. My expertise lies in building
-              responsive, user-friendly, and visually appealing web applications. I enjoy combining design and logic
-              to solve real-world problems and am always eager to learn new tools and frameworks in tech.
+              I'm <strong>Talatunnisa A. Siddiqui</strong>, a passionate B.Tech Computer Science and Engineering student with a strong interest in full-stack development, AI-powered applications, and software testing.
+
+I specialize in building responsive and user-friendly web applications using the MERN stack, along with hands-on experience in REST API development and integration. I have foundational knowledge of cloud platforms including AWS, Azure, and GCP, and I am familiar with CI/CD pipelines for efficient deployment.
+
+Alongside development, I focus on software quality through debugging, API testing, and writing basic test cases. I enjoy combining design, logic, and automation to solve real-world problems and continuously strive to learn modern technologies and best practices.
             </p>
           </div>
         </motion.div>
