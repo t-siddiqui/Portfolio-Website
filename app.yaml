@@ -12,3 +12,8 @@ handlers:
   - url: /.*
     static_files: build/index.html
     upload: build/index.html
+
+env_variables:
+  REACT_APP_EMAILJS_SERVICE_ID: "service_4qgj0ge"
+  REACT_APP_EMAILJS_TEMPLATE_ID: "template_lb2e1d4"
+  REACT_APP_EMAILJS_PUBLIC_KEY: "JWPlOFnAwRe_VGCEO"
