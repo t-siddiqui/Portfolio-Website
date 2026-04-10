@@ -31,8 +31,8 @@ body::-webkit-scrollbar {
 .typewriter-glow {
   /* Properties from the glowing outline effect */
   color: #60a5fa; /*Tailwind's blue-400 for the text fill*/
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #0a2540; /* The dark outline */
+  /* -webkit-text-stroke-width: 2px; */
+  /* -webkit-text-stroke-color: #0a2540; */ /* The dark outline */
 
   /* Properties from the typewriter effect */
   display: inline-block;
@@ -44,8 +44,7 @@ body::-webkit-scrollbar {
   /* Combined animations, separated by commas */
   animation: 
     typing-deleting 9s steps(14, end) infinite,
-    blink-caret 0.75s step-end infinite,
-    text-glow-pulse 3s ease-in-out infinite;
+    blink-caret 0.75s step-end infinite;
 }
 
 
@@ -81,7 +80,7 @@ body::-webkit-scrollbar {
 .project-card:hover {
   box-shadow: 0 0 20px rgba(99, 102, 241, 0.8), 0 0 40px rgba(99, 102, 241, 0.5), 0 0 60px rgba(99, 102, 241, 0.3);
 }
-.project-title { @apply text-xl font-semibold; }
+.project-title { @apply text-xl font-semibold text-gray-900 dark:text-white; }
 .project-desc { @apply text-sm text-gray-600 dark:text-gray-300 mt-2; }
 .project-link { @apply text-blue-500 underline mt-3 inline-block; }
 
@@ -169,7 +168,7 @@ body::-webkit-scrollbar {
 /* Keyframes for the .typewriter-glow class */
 @keyframes typing-deleting {
   0%, 100% { width: 0; }
-  50%, 90% { width: 14ch; }
+  50%, 90% { width: 16ch; }
 }
 @keyframes blink-caret {
   from, to { border-color: transparent }

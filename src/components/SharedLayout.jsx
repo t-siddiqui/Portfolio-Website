@@ -12,13 +12,13 @@ export default function SharedLayout({ darkMode, setDarkMode }) {
         {/* Navigation Links - CRITICAL: Use <Link> and 'to', not <a> and 'href' */}
         
            <nav className="flex flex-wrap gap-4">
-          <a href="/Portfolio-Website/#about" className="nav-glow px-4 py-2 rounded-lg text-sm font-medium dark:text-white text-gray-800">About Me</a>
-          <a href="/Portfolio-Website/#projects" className="nav-glow px-4 py-2 rounded-lg text-sm font-medium dark:text-white text-gray-800">Projects</a>
-          <a href="/Portfolio-Website/#achievements" className="nav-glow px-4 py-2 rounded-lg text-sm font-medium dark:text-white text-gray-800">Achievements</a>
+          <a href="/#about" className="nav-glow px-4 py-2 rounded-lg text-sm font-medium dark:text-white text-gray-800">About Me</a>
+          <a href="/#projects" className="nav-glow px-4 py-2 rounded-lg text-sm font-medium dark:text-white text-gray-800">Projects</a>
+          <a href="/#achievements" className="nav-glow px-4 py-2 rounded-lg text-sm font-medium dark:text-white text-gray-800">Achievements</a>
           {/* Note the capital 'S' to match your id="Skills" */}
-          <a href="/Portfolio-Website/#Skills" className="nav-glow px-4 py-2 rounded-lg text-sm font-medium dark:text-white text-gray-800">Skills</a>
-          <a href="/Portfolio-Website/#resume" className="nav-glow px-4 py-2 rounded-lg text-sm font-medium dark:text-white text-gray-800">Resume</a>
-          <a href="/Portfolio-Website/#contact" className="nav-glow px-4 py-2 rounded-lg text-sm font-medium dark:text-white text-gray-800">Contact</a>
+          <a href="/#Skills" className="nav-glow px-4 py-2 rounded-lg text-sm font-medium dark:text-white text-gray-800">Skills</a>
+          <a href="/#resume" className="nav-glow px-4 py-2 rounded-lg text-sm font-medium dark:text-white text-gray-800">Resume</a>
+          <a href="/#contact" className="nav-glow px-4 py-2 rounded-lg text-sm font-medium dark:text-white text-gray-800">Contact</a>
         </nav>
 
         {/* Dark Mode Toggle Button */}
